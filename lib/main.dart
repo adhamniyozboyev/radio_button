@@ -23,11 +23,12 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text('Quiz')),
       body: Column(
         children: [
           Container(
-              height: 780,
-              color: Colors.yellow,
+              height: 690,
+              color: Colors.white,
               alignment: Alignment.center,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -35,6 +36,7 @@ class _MyAppState extends State<MyApp> {
                 children: [
                   const Text('Who is Football player?'),
                   RadioListTile(
+                    activeColor: Colors.red,
                       title: const Text('Og\'abek'),
                       value: 1,
                       groupValue: val,
@@ -43,10 +45,12 @@ class _MyAppState extends State<MyApp> {
                           val = v as int;
                         });
                         setState(() {
-                          test = 'false';
+                          test = 'false❌';
                         });
                       }),
                   RadioListTile(
+                    
+                    activeColor: Colors.green,
                       title: const Text('Dybala'),
                       value: 2,
                       groupValue: val,
@@ -55,10 +59,11 @@ class _MyAppState extends State<MyApp> {
                           val = v as int;
                         });
                         setState(() {
-                          test = 'True';
+                          test = 'True✔✔';
                         });
                       }),
                   RadioListTile(
+                    activeColor: Colors.red,
                       title: const Text('Emenim'),
                       value: 3,
                       groupValue: val,
@@ -67,7 +72,7 @@ class _MyAppState extends State<MyApp> {
                           val = v as int;
                         });
                         setState(() {
-                          test = 'false';
+                          test = 'false❌';
                         });
                       }),
                 ],
